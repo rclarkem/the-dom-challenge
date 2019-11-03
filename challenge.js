@@ -1,5 +1,4 @@
 let isPaused = true
-
 document.addEventListener('DOMContentLoaded',function(){
   let counter = document.querySelector('#counter')
   let plus = document.getElementById("+")
@@ -24,12 +23,8 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 
   function likeHeart(){
-  if(heartHash[counter.innerText]){
-    heartHash[counter.innerText]++
-  } else {
-    heartHash[counter.innerText] = 1
-  }
-    likecounter.innerHTML = ""
+  heartHash[counter.innerText] ? heartHash[counter.innerText]++ : heartHash[counter.innerText] = 1
+  likecounter.innerHTML = ""
     for(let num in heartHash){
       let newNum = document.createElement('li')
       newNum.innerText = `${num} has been liked ${heartHash[num]} ${heart.innerText}`
@@ -76,5 +71,4 @@ document.addEventListener('DOMContentLoaded',function(){
     createACommentLI.innerText = comment
     createACommentUL.append(createACommentLI)
   })
-
 })
