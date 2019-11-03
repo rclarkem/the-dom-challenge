@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded',function(){
   let minus = document.getElementById("-")
   let heart = document.getElementById('<3')
   let pause = document.querySelector("#pause")
-  let findTest = document.getElementById('test')
   let likecounter = document.querySelector('.likes')
   let formT = document.querySelector('#comment-form')
   let heartHash = {}
